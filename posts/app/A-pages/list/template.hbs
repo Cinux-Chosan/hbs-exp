@@ -1,3 +1,17 @@
 {{outlet}}
 <h1 class="text-center">{{myName}} is {{age}} years old</h1>
 "{{componentCssClassName}}" is the name of each ember-component-css name
+
+<div id="liquid-bind-demo">
+  {{liquid-bind hours}}
+</div>
+<div id="liquid-spacer-demo">
+  <label>{{input type="checkbox" checked=showLongMessage}} Show Long Message</label>
+  {{#liquid-spacer growDuration=250}}
+    {{#if showLongMessage}}
+      {{longMessage}}
+    {{else}}
+      {{shortMessage}}
+    {{/if}}
+  {{/liquid-spacer}}
+</div>
