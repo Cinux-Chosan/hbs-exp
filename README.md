@@ -4,12 +4,14 @@
 - emberjs 作为前端
 
 ## start
+> mode 1:
 - npm i
 - bower i 
 - cd posts
 - npm i 
 - bower i 
 or
+> mode 2:
 - ln -s ~/bower_components .
 - ln -s ~/node_modules .
 - ln -s ~/bower_components posts
