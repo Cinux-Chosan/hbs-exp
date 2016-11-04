@@ -10,6 +10,7 @@
 - cd posts
 - npm i 
 - bower i 
+
 or
 > mode 2:
 - ln -s ~/bower_components .
