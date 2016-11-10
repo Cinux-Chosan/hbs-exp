@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var query = require('./routes/query');
+var people = require('./routes/people');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'posts/dist')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/queries', query);
+app.use('/people', people);
 
 
 app.get('/data', function(req, res) {
