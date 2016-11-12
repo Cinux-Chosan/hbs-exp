@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('list');
   this.route('posts', function() {
     this.route('new');
+    this.route('list');
   });
 });
 
