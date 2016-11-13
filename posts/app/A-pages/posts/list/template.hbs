@@ -1,13 +1,18 @@
 <div class="container">
-  <aside class="h500 col-sm-4 trans-left-1s {{if showList '' 'pos-fixed hide-list'}}">
+  <aside class="h5000 bg-red col-sm-4 trans-left-1s {{if showList '' 'pos-fixed hide-list'}}">
 
   </aside>
 
   <article class="article {{if showList 'col-sm-8' 'col-sm-12'}}">
+    {{#liquid-bind model use="rotateBelow" as |currentModel|}}
     <div class="article-main">
-      <div class="article-title"></div>
-      <div class="article-content bg-green h500"></div>
-     {{!-- <button {{action "toggleShowList"}}>toggle</button> --}}
+        <div class="article-title"></div>
+        <div class="article-content bg-green h500"></div>
+        {{!-- <button {{action "toggleShowList"}}>toggle</button> --}}
+        {{!-- {{link-to "下一页" "posts.list" (add 1 currentModel.id)}} --}}
+        {{!-- <button {{action "rotate" currentModel}}>toggle</button> --}}
+        {{currentModel.id}}
    </div>
+   {{/liquid-bind}}
   </article>
 </div>

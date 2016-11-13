@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   actions: {
     toggleShowList() {
       this.toggleProperty('showList');
-    }
+    },
+    rotate(mod) {}
   }
 });
