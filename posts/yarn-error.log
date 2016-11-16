@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js check
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 Yarn version: 
   0.16.1
@@ -5256,5 +5256,5 @@ Lockfile:
     resolved "http://registry.npm.taobao.org/yeast/download/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: EACCES: permission denied, open '/home/chosan/myDev/express/hbs-exp/posts/node_modules/source-map-url/package.json'
+  Error: ENOENT: no such file or directory, lstat '/home/chosan/myDev/express/hbs-exp/posts/node_modules/ember-legacy-views'
       at Error (native)
