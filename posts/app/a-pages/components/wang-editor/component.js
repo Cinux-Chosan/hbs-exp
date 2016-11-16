@@ -2,17 +2,23 @@ import Ember from 'ember';
 import { load } from 'posts/utils/utils';
 
 export default Ember.Component.extend({
-
-  async init() {
-    this._super(...arguments);
-    load('/assets2/wang-editor.css');
-    await load('/assets2/wang-editor.js');
-    console.log("xxxxaaa");
-  },
+  editor: null,
+  content: '',
 
   didInsertElement() {
-    let div = this.$('.wang-editor');
-    var editor = new wangEditor(div);
-    editor.create();
+    this._super(...arguments);
+    load('/assets2/wang-editor.css');
+    load('/assets2/wang-editor.js').then((r) => {
+      let div = this.$('.wang-editor'),
+        editor = new wangEditor(div);
+      editor.create();
+      this.set('editor', editor);
+    })
+  },
+
+  willDestroy() {
+    this._super(...arguments);
+    let editor = this.get('editor');
+    editor && editor.destroy();
   }
 });
