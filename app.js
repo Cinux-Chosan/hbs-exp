@@ -25,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'posts/dist')));
+app.use(express.static(path.join(__dirname, 'posts/dist/assets2')));
 
 app.use('/', index);
 app.use('/users', users);

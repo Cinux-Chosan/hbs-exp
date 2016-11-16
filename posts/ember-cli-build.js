@@ -25,9 +25,23 @@ module.exports = function(defaults) {
     },
     nodeAssets: {
       'wangeditor': {
-        srcDir: 'dist',
-        import: ['css/wangEditor.less', 'js/wangEditor.min.js'],
-        public: ['fonts/*']
+        import: {
+          srcDir: 'dist',
+          include: [{
+            path: 'css/wangEditor.css',
+            outputFile: 'assets2/wang-editor.css'
+          }, {
+            path: 'js/wangEditor.min.js',
+            outputFile: 'assets2/wang-editor.js'
+          }]
+        },
+        public: {
+          srcDir: 'dist',
+          destDir: 'assets2',
+          include: [{
+            path: 'fonts/*'
+          }]
+        }
       }
     }
   });

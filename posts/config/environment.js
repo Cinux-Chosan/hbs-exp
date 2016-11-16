@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'posts',
     environment: environment,
-    podModulePrefix: 'posts/A-pages',
+    podModulePrefix: 'posts/a-pages',
     rootURL: '/',
     locationType: 'hash',
     EmberENV: {
